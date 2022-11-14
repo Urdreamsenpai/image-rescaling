@@ -1,0 +1,31 @@
+import cv2
+
+def main():
+    imgpath1 = "C:\\Users\\hp\\Downloads\\misc\\4k.jpg"
+    img1 = cv2.imread(imgpath1, 1)
+    img1 = cv2.resize(img1, (960, 540)) 
+    cv2.imshow('4k', img1)
+    
+    imgpath2 = "C:\\Users\\hp\\Downloads\\misc\\1080p.jpg"
+    img2 = cv2.imread(imgpath2, 1)
+    img2 = cv2.resize(img2, (1920, 1080)) 
+    cv2.imshow('1080p', img2)
+    
+    imgpath3 = "C:\\Users\\hp\\Downloads\\misc\\720p.jpg"
+    img3 = cv2.imread(imgpath3, 1)
+    img3 = cv2.resize(img3, (1280, 720)) 
+    cv2.imshow('720p', img3)
+    
+    imgpath4 = "C:\\Users\\hp\\Downloads\\misc\\480p.jpg"
+    img4 = cv2.imread(imgpath4, 1)
+    img4 = cv2.resize(img4, (858, 480)) 
+    cv2.imshow('480p', img4)
+    
+    cv2.waitKey(0)
+    cv2.destroyWindow('4k')
+    cv2.destroyWindow('1080p')
+    cv2.destroyWindow('720p')
+    cv2.destroyWindow('480p')
+    
+if __name__ == "__main__":
+    main()
